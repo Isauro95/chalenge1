@@ -11,13 +11,16 @@ export default function Home() {
           </p>
           <ul className="Puntos">
             <li className="P1">
-              <img></img>Product discovery and building what matters
+              <img src="/Img/icon-list.svg" />
+              Product discovery and building what matters
             </li>
             <li className="P2">
-              <img></img>Measuring to ensure updates are a success
+              <img src="/Img/icon-list.svg" />
+              Measuring to ensure updates are a success
             </li>
             <li className="P3">
-              <img></img>And much more!
+              <img src="/Img/icon-list.svg" />
+              And much more!
             </li>
           </ul>
           <div>Email address</div>
@@ -35,7 +38,7 @@ export default function Home() {
       </div>
       <div className="contenido derecha">
         <div className="imagen">
-          <img src={"./img/icon.list.svg"}></img>
+          <img src="/Img/illustration-sign-up-desktop.svg" />
         </div>
       </div>
     </div>
