@@ -1,9 +1,11 @@
 import styles from "./page.module.css";
+import "./page.module.css";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <div className="Pagina principal">
-      <div className="contenido de la izquierda">
+    <div className="Principal">
+      <div className="izquierda">
         <div className="Texto">
           <h2 className="Titulo">Stay updated!</h2>
           <p className="subtitulo">
@@ -36,7 +38,7 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <div className="contenido derecha">
+      <div className="derecha">
         <div className="imagen">
           <img src="/Img/illustration-sign-up-desktop.svg" />
         </div>
