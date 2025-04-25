@@ -91,3 +91,23 @@ html {
 .Boton button:active {
   background-color: red;
 }
+
+.LabelErrorWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.ErrorMensaje {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  right: 50px;
+}
+
+.ErrorInput {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+  color: red;
+}

@@ -1,9 +1,33 @@
+"use client";
 import styles from "./page.module.css";
 import "./page.module.css";
 import "./globals.css";
 import { useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+  const [isClicked, setIsClicked] = useState(false); // ✅ Faltaba esta línea
+
+  const validateEmail = (email: string) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // pattern para validar email
+    return regex.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setError("Valid Email Required");
+      setIsClicked(false);
+      return;
+    }
+
+    setError("");
+    setIsClicked(true);
+    console.log("Email enviado:", email);
+  };
+
   return (
     <div className="Principal">
       <div className="izquierda">
@@ -26,15 +50,23 @@ export default function Home() {
               And much more!
             </li>
           </ul>
-          <div>Email address</div>
-          <form className="InputEmail">
+          <form className="InputEmail" onSubmit={handleSubmit}>
+            <div className="LabelErrorWrapped">
+              <label>Email Address</label>
+              {error && <span className="ErrorMensaje">{error}</span>}
+            </div>
             <input
-              type="Email"
+              type="email"
               placeholder="email@company.com"
-              className="Email"
-            ></input>
+              className={`Email ${error ? "ErrorInput" : ""}`}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
             <div className="Boton">
-              <button>Subscribe to monthly newsletter</button>
+              <button className={isClicked ? "Clicked" : ""}>
+                Subscribe to monthly newsletter
+              </button>
             </div>
           </form>
         </div>
