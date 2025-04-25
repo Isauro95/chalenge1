@@ -88,10 +88,6 @@ html {
   cursor: pointer;
 }
 
-.Boton button:hover {
-  background-color: #151a24;
-}
-
-.Clicked {
-  background-color: #2c3650;
+.Boton button:active {
+  background-color: red;
 }
