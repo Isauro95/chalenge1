@@ -12,15 +12,15 @@ export default function Home() {
             Join 60,000+ product managers receiving monthly updates on:
           </p>
           <ul className="Puntos">
-            <li className="P1">
+            <li className="Punto">
               <img src="/Img/icon-list.svg" />
               Product discovery and building what matters
             </li>
-            <li className="P2">
+            <li className="Punto">
               <img src="/Img/icon-list.svg" />
               Measuring to ensure updates are a success
             </li>
-            <li className="P3">
+            <li className="Punto">
               <img src="/Img/icon-list.svg" />
               And much more!
             </li>
