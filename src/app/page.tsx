@@ -7,10 +7,10 @@ import { useState } from "react";
 export default function Home() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
-  const [isClicked, setIsClicked] = useState(false); // ✅ Faltaba esta línea
+  const [isClicked, setIsClicked] = useState(false);
 
   const validateEmail = (email: string) => {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // pattern para validar email
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // patron para validar email
     return regex.test(email);
   };
 
